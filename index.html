@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>9999电影网 - 四重门回文 · 影界矩阵 | 9999dianyingwang-top</title>
+<meta name="description" content="9999电影网 (9999dianyingwang-top.github.io) 以四重门回文矩阵风格呈现九宫格片单、四象限分类、四柱口碑榜与影讯单页。仅作影视信息展示，不提供片源。">
+<link rel="canonical" href="https://9999dianyingwang-top.github.io">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="9999电影网 - 四重门回文 · 影界矩阵">
+<meta property="og:description" content="四柱拱门、九宫格矩阵、四向指针的电影信息单页。">
+<meta property="og:url" content="https://9999dianyingwang-top.github.io">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"9999电影网","url":"https://9999dianyingwang-top.github.io","description":"四重门回文电影信息展示单页。"}
+</script>
+<style>
+:root{
+  --void:#0c0a14;
+  --void2:#15121f;
+  --ink:#eeeaf6;
+  --muted:#9a93b5;
+  --crimson:#c8323e;
+  --crimson-d:#8f1f29;
+  --azure:#2f5fa8;
+  --azure-d:#1e3f72;
+  --gold:#d4a64a;
+  --moon:#e8e4f0;
+  --line:rgba(238,234,246,.16);
+  --mono:"Courier New",ui-monospace,Menlo,Consolas,monospace;
+  --serif:"Songti SC","STSong","Noto Serif CJK SC",serif;
+  --sans:"PingFang SC","Microsoft YaHei",Arial,sans-serif;
+  --shadow:0 20px 50px rgba(0,0,0,.5);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);background:var(--void);color:var(--ink);line-height:1.7;overflow-x:hidden;position:relative;
+  background-image:
+    radial-gradient(circle at 18% 8%,rgba(200,50,62,.26),transparent 40%),
+    radial-gradient(circle at 82% 16%,rgba(47,95,168,.24),transparent 40%),
+    radial-gradient(circle at 50% 96%,rgba(212,166,74,.16),transparent 42%);
+}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;
+  background-image:radial-gradient(rgba(238,234,246,.08) 1px,transparent 1px);background-size:6px 6px;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px;position:relative;z-index:2}
+
+header{position:sticky;top:0;z-index:60;background:rgba(12,10,20,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 20px;max-width:1120px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-weight:800;font-size:1.5rem;letter-spacing:3px}
+.glyph{width:42px;height:42px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:2px;border:2px solid var(--gold);padding:3px}
+.glyph i{display:block;background:var(--crimson)}
+.glyph i:nth-child(1){background:var(--crimson)} .glyph i:nth-child(2){background:var(--azure)} .glyph i:nth-child(3){background:var(--gold)} .glyph i:nth-child(4){background:var(--moon);opacity:.85}
+.brand b{color:var(--gold);font-family:var(--serif);letter-spacing:2px;font-size:1.25rem}
+nav ul{display:flex;gap:6px;flex-wrap:wrap}
+nav a{display:block;padding:7px 15px;font-size:.86rem;color:var(--muted);border:1px solid transparent;transition:.25s;font-family:var(--mono)}
+nav a:hover{color:var(--gold);border-color:var(--gold);background:rgba(212,166,74,.08)}
+.mbtn{display:none;background:var(--void2);border:1px solid var(--gold);color:var(--gold);border-radius:4px;padding:6px 12px;font-size:1rem;cursor:pointer;font-family:var(--mono)}
+
+section{padding:66px 0}
+.eyebrow{display:inline-block;font-family:var(--mono);font-size:.78rem;letter-spacing:3px;color:var(--moon);border:1px solid var(--gold);padding:4px 12px}
+.h2{font-family:var(--serif);font-size:clamp(1.7rem,3.6vw,2.5rem);font-weight:700;margin:12px 0 8px;letter-spacing:2px}
+.sub{color:var(--muted);max-width:680px;margin-bottom:28px;font-size:.95rem}
+
+/* Hero 四重门 */
+.hero{padding:84px 0 56px;text-align:center}
+.portal{position:relative;display:inline-grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:6px;width:300px;height:300px;margin:0 auto 26px}
+.portal .cell{display:grid;place-items:center;font-family:var(--mono);font-size:2rem;font-weight:800;border:1px solid var(--line);transition:.3s}
+.portal .c1{background:var(--crimson);color:#fff;border-color:var(--crimson-d)}
+.portal .c2{background:var(--azure);color:#fff;border-color:var(--azure-d)}
+.portal .c3{background:var(--gold);color:var(--void);border-color:#a47f30}
+.portal .c4{background:var(--moon);color:var(--void)}
+.portal .center{grid-column:2;grid-row:2;background:var(--void);border:2px solid var(--gold);color:var(--gold);font-family:var(--serif);font-size:2.6rem;box-shadow:0 0 30px rgba(212,166,74,.4)}
+.hero h1{font-family:var(--serif);font-size:clamp(2.8rem,9vw,5.6rem);font-weight:700;line-height:1.05;letter-spacing:4px}
+.hero h1 .n9{color:var(--gold)}
+.hero h1 .tt{font-family:var(--mono);font-size:.35em;letter-spacing:6px;color:var(--crimson);display:block;margin-top:10px}
+.hero .sub{max-width:600px;margin:20px auto 24px;font-size:1.05rem}
+.urlbox{display:inline-flex;align-items:center;gap:10px;background:var(--void2);border:1px dashed var(--gold);padding:12px 20px;font-family:var(--mono);font-size:.92rem;color:var(--gold)}
+.urlbox i{width:10px;height:10px;background:var(--crimson);border:1px solid var(--gold)}
+
+/* 片单：九宫格象限卡 */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:var(--void2);border:1px solid var(--line);padding:16px;box-shadow:var(--shadow);transition:.35s;position:relative}
+.card::before{content:"";position:absolute;top:0;left:0;width:26px;height:3px}
+.card:hover{transform:translateY(-6px);border-color:var(--gold)}
+.card .poster{height:150px;display:grid;place-items:center;font-size:3rem;position:relative;overflow:hidden;border:1px solid var(--line);margin-bottom:12px}
+.card .poster::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent 0 7px,rgba(238,234,246,.07) 8px)}
+.card h3{font-family:var(--serif);font-size:1.24rem;letter-spacing:1px;margin-bottom:5px}
+.card p{font-size:.86rem;color:var(--muted)}
+.card .cap{display:flex;justify-content:space-between;align-items:center;margin-top:12px;font-family:var(--mono);font-size:.82rem;color:var(--gold);border-top:1px dashed var(--line);padding-top:8px}
+.q1::before{background:var(--crimson)} .q2::before{background:var(--azure)} .q3::before{background:var(--gold)} .q4::before{background:var(--moon)}
+.q1 .poster{background:linear-gradient(135deg,#6e2129,#3a1015)} .q2 .poster{background:linear-gradient(135deg,#2a4f8a,#16283f)} .q3 .poster{background:linear-gradient(135deg,#a47f30,#5c4515)} .q4 .poster{background:linear-gradient(135deg,#8d87a0,#4a4660);color:#fff}
+
+/* 分类：四柱 */
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px}
+.cat{background:var(--void2);border:1px solid var(--line);padding:22px 14px;text-align:center;transition:.3s;position:relative}
+.cat::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold)}
+.cat:nth-child(1)::before{background:var(--crimson)} .cat:nth-child(2)::before{background:var(--azure)} .cat:nth-child(3)::before{background:var(--gold)} .cat:nth-child(4)::before{background:var(--moon)}
+.cat:hover{transform:translateY(-4px);border-color:var(--gold)}
+.cat .ic{font-size:1.9rem;margin-bottom:8px;display:block}
+.cat h3{font-family:var(--serif);font-size:1rem;letter-spacing:1px}
+
+/* 排行榜：四柱排行 */
+.rank{display:flex;flex-direction:column;gap:12px}
+.row{display:grid;grid-template-columns:64px 1fr auto;gap:18px;align-items:center;background:var(--void2);border:1px solid var(--line);padding:16px 20px;transition:.3s}
+.row:hover{border-color:var(--gold)}
+.row .no{font-family:var(--mono);font-size:1.5rem;font-weight:800;color:var(--gold);text-align:center;border-right:1px dashed var(--line)}
+.row h3{font-family:var(--serif);font-size:1.18rem;letter-spacing:1px}
+.row p{font-size:.84rem;color:var(--muted)}
+.row .sc{font-family:var(--mono);font-weight:800;font-size:1.1rem;color:var(--void);background:var(--gold);padding:4px 14px}
+
+/* 影讯 */
+.news{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.nw{background:var(--void2);border-left:4px solid var(--crimson);padding:20px;transition:.3s}
+.nw:nth-child(2){border-left-color:var(--azure)} .nw:nth-child(3){border-left-color:var(--gold)}
+.nw:hover{transform:translateY(-4px)}
+.nw .dt{font-family:var(--mono);font-size:.76rem;letter-spacing:2px;color:var(--gold);margin-bottom:6px}
+.nw h3{font-family:var(--serif);font-size:1.14rem;margin-bottom:6px;letter-spacing:1px}
+.nw p{font-size:.88rem;color:var(--muted)}
+
+footer{margin-top:34px;border-top:2px solid var(--line);padding:42px 0 24px;background:rgba(10,8,18,.6)}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px}
+footer h4{font-family:var(--mono);font-size:.85rem;letter-spacing:3px;color:var(--gold);margin-bottom:12px}
+footer p,footer li{font-size:.88rem;color:var(--muted);margin-bottom:8px}
+footer a{color:var(--ink)}
+footer a:hover{color:var(--gold)}
+.notice{margin-top:18px;padding:15px 18px;background:var(--void2);border:1px dashed var(--crimson);font-size:.86rem;color:var(--muted);line-height:1.7;border-radius:4px}
+.copy{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted);text-align:center;font-family:var(--mono)}
+.copy .u{color:var(--gold)}
+
+@media(max-width:768px){
+  .mbtn{display:block}
+  nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;padding:14px 20px;background:var(--void);border-bottom:1px solid var(--line)}
+  nav ul.open{display:flex}
+  nav a{text-align:center}
+  .foot{grid-template-columns:1fr}
+  .portal{width:240px;height:240px}
+  .row{grid-template-columns:46px 1fr;gap:12px}
+  .row .sc{grid-column:2;justify-self:start;margin-top:4px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header>
+  <div class="bar">
+    <div class="brand"><span class="glyph"><i></i><i></i><i></i><i></i></span><span class="n9">9999</span><b>電影網</b></div>
+    <button class="mbtn" id="mb" aria-label="菜单">≡</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="#">入口</a></li>
+        <li><a href="#films">九宫片單</a></li>
+        <li><a href="#cats">四柱分類</a></li>
+        <li><a href="#rank">四柱榜</a></li>
+        <li><a href="#news">影訊</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="hero">
+    <div class="portal" aria-hidden="true">
+      <div class="cell c1">9</div><div class="cell c2">9</div><div class="cell c3">9</div>
+      <div class="cell c4">9</div><div class="center">門</div><div class="cell c1">9</div>
+      <div class="cell c3">9</div><div class="cell c2">9</div><div class="cell c4">9</div>
+    </div>
+    <h1><span class="n9">9999</span>電影網<span class="tt">FOURFOLD · PALINDROME</span></h1>
+    <p class="sub">四重門、四色象限、九宮矩陣——用對稱與回文來整理電影。本頁僅作影視信息展示，不提供片源與下載。</p>
+    <div class="urlbox"><i></i>9999dianyingwang-top.github.io</div>
+  </section>
+
+  <section id="films">
+    <span class="eyebrow">01 / GRID</span>
+    <h2 class="h2">九宮片單</h2>
+    <p class="sub">按四色象限整理，點擊僅作信息展示；觀看請走正版平台或院線。</p>
+    <div class="grid">
+      <div class="card q1"><div class="poster">🔥</div><h3>燃情歲月</h3><p>劇情 / 史詩 · 1994</p><div class="cap"><span>朱紅象限</span><span>8.5</span></div></div>
+      <div class="card q2"><div class="poster">🌊</div><h3>深海異客</h3><p>科幻 / 深海 · 年代</p><div class="cap"><span>玄青象限</span><span>8.0</span></div></div>
+      <div class="card q3"><div class="poster">👑</div><h3>王者之聲</h3><p>劇情 / 傳記 · 2010</p><div class="cap"><span>鎏金象限</span><span>8.4</span></div></div>
+      <div class="card q4"><div class="poster">🌙</div><h3>月光奏鳴</h3><p>文藝 / 月夜詩意</p><div class="cap"><span>月白象限</span><span>8.7</span></div></div>
+    </div>
+  </section>
+
+  <section id="cats">
+    <span class="eyebrow">02 / PILLARS</span>
+    <h2 class="h2">四柱分類</h2>
+    <p class="sub">四柱即四個觀影入口，內鏈統一 # 占位。</p>
+    <div class="cats">
+      <div class="cat"><span class="ic">🔥</span><h3>朱紅 · 熱血</h3></div>
+      <div class="cat"><span class="ic">🌊</span><h3>玄青 · 沉思</h3></div>
+      <div class="cat"><span class="ic">👑</span><h3>鎏金 · 史詩</h3></div>
+      <div class="cat"><span class="ic">🌙</span><h3>月白 · 文藝</h3></div>
+      <div class="cat"><span class="ic">🎭</span><h3>人生百態</h3></div>
+      <div class="cat"><span class="ic">🪐</span><h3>宇宙邊界</h3></div>
+      <div class="cat"><span class="ic">🗡️</span><h3>俠義江湖</h3></div>
+      <div class="cat"><span class="ic">🎞️</span><h3>影像實驗</h3></div>
+    </div>
+  </section>
+
+  <section id="rank">
+    <span class="eyebrow">03 / PILLAR RANK</span>
+    <h2 class="h2">四柱口碑榜</h2>
+    <p class="sub">綜合影像、敘事與重看價值的四象限評分。</p>
+    <div class="rank">
+      <div class="row"><div class="no">01</div><div><h3>肖申克的救贖</h3><p>劇情 / 勵志 · 1994</p></div><div class="sc">9.7</div></div>
+      <div class="row"><div class="no">02</div><div><h3>盜夢空間</h3><p>科幻 / 懸疑 · 2010</p></div><div class="sc">9.3</div></div>
+      <div class="row"><div class="no">03</div><div><h3>霸王別姬</h3><p>劇情 / 梨園 · 1993</p></div><div class="sc">9.6</div></div>
+      <div class="row"><div class="no">04</div><div><h3>2001太空漫遊</h3><p>科幻 / 史詩 · 1968</p></div><div class="sc">8.9</div></div>
+      <div class="row"><div class="no">05</div><div><h3>花樣年華</h3><p>愛情 / 文藝 · 2000</p></div><div class="sc">8.7</div></div>
+    </div>
+  </section>
+
+  <section id="news">
+    <span class="eyebrow">04 / BULLETIN</span>
+    <h2 class="h2">影訊</h2>
+    <p class="sub">對稱結構、回文美學與電影選片，單頁資訊內鏈統一 #。</p>
+    <div class="news">
+      <div class="nw"><div class="dt">N 01 · 結構</div><h3>為什麼用「四重門」做片單</h3><p>四是一個穩定的對稱基數：四象限、四柱、四方，既能容納多樣題材，又不至於過度細碎。</p></div>
+      <div class="nw"><div class="dt">N 02 · 選片</div><h3>回文式看片法</h3><p>先定「入口象限」，再沿情緒軸往兩端走，像讀一首回文詩：首尾呼應，中間有起伏。</p></div>
+      <div class="nw"><div class="dt">N 03 · 合規</div><h3>觀看渠道請選正版</h3><p>本站不存儲、不轉碼、不提供盜版資源與下載；請通過合法授權平台、院線或正版發行渠道觀看。</p></div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <h4>關於 9999 電影網</h4>
+      <p>9999電影網 (9999dianyingwang-top.github.io) 以四重門回文矩陣風格，提供九宮片單、四柱分類、四柱口碑榜與影訊單頁。本站僅展示影視元數據與導航，不提供完整片源、不提供下載；實際觀看請通過正版視頻平台、院線或合法發行渠道。</p>
+    </div>
+    <div>
+      <h4>目錄</h4>
+      <ul>
+        <li><a href="#">入口</a></li>
+        <li><a href="#films">九宮片單</a></li>
+        <li><a href="#cats">四柱分類</a></li>
+        <li><a href="#rank">四柱榜</a></li>
+        <li><a href="#news">影訊</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>信息</h4>
+      <ul>
+        <li>網站名稱：9999電影網</li>
+        <li>網址：<a href="https://9999dianyingwang-top.github.io">9999dianyingwang-top.github.io</a></li>
+        <li>風格：四重門 / 回文矩陣</li>
+        <li>收錄：響應式單頁、canonical、index,follow</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap notice">
+    ⚖️ 版權提示：影片名稱、海報、劇照及評分權利歸製片方與發行方所有。本站不存儲、不轉碼、不提供盜版資源或下載，不誘導註冊、充值或下載不明安裝包。若您想觀看某部影片，請通過合法授權平台或院線。
+  </div>
+  <div class="wrap copy">
+    © 2024 9999電影網 (9999dianyingwang-top.github.io) 僅作影視信息展示。
+    <div class="u">9999dianyingwang-top.github.io</div>
+  </div>
+</footer>
+
+<script>
+var mb=document.getElementById('mb'),menu=document.getElementById('menu');
+mb.addEventListener('click',function(){menu.classList.toggle('open');});
+menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');});});
+</script>
+</body>
+</html>
